@@ -13,8 +13,8 @@ def open_session(session_name):
     except FileNotFoundError:
         input("Enter api_id")
         api = {
-            'api_id' : input("Enter api_id") ,
-            'api_hash' : input("Enter api_hash")
+            'api_id': input("Enter api_id: "),
+            'api_hash': input("Enter api_hash: ")
             }
         with open(config_filename, 'w') as f:
             json.dump(api, f)
