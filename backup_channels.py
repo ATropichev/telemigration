@@ -8,7 +8,7 @@ def backup_channels(client, session_name):
     filename = session_name+'_chanell_list'
     with open(filename, 'w') as file_object:
         for dialog in client.iter_dialogs():
-            if dialog.is_channel:  # Only channels is processing
+            if dialog.is_channel:  # Process channels only
                 if dialog.entity.username is None:
                     print(dialog.title+" channel with no username!\n")
                 else:
