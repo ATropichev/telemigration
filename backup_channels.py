@@ -5,7 +5,7 @@ from open_session import open_session
 
 
 def backup_channels(client, session_name):
-    filename = session_name+'_chanell_list'
+    filename = session_name+'_channel_list'
     with open(filename, 'w') as file_object:
         for dialog in client.iter_dialogs():
             if dialog.is_channel:  # Process channels only

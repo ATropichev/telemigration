@@ -6,7 +6,7 @@ from open_session import open_session
 
 
 def restore_channels(client, session_name):
-    filename = session_name+'_chanell_list'
+    filename = session_name+'_channel_list'
     with open(filename, 'r') as file_object:
         for line in file_object:
             print("Join @"+line.rstrip())
