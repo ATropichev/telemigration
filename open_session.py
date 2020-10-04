@@ -11,7 +11,6 @@ def open_session(session_name):
         with open(config_filename, 'r') as f:
             api = json.load(f)
     except FileNotFoundError:
-        input("Enter api_id")
         api = {
             'api_id': input("Enter api_id: "),
             'api_hash': input("Enter api_hash: ")
